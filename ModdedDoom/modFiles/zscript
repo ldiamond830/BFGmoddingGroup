@@ -12,8 +12,6 @@ class snowflake : LostSoul {
 
 Default{
 -FLOAT
-
-
 Obituary "%o was frozen to death";
 }
 
