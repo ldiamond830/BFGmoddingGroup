@@ -27,7 +27,17 @@ maps
 				location = "C:\\repoTemp\\BFGmoddingGroup\\ModdedDoom\\GzDoom\\gzdoom.pk3";
 				option1 = 0;
 				option2 = 0;
-				notfortesting = 1;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
+			
+			resource2
+			{
+				type = 1;
+				location = "C:\\repoTemp\\BFGmoddingGroup\\ModdedDoom\\modFiles";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
 				requiredarchives = "";
 			}
 		}
