@@ -14,7 +14,7 @@ maps
 			resource0
 			{
 				type = 0;
-				location = "C:\\repoTemp\\BFGmoddingGroup\\ModdedDoom\\WADS\\DOOM2.WAD";
+				location = "D:\\Github\\BFGmoddingGroup\\ModdedDoom\\WADS\\DOOM2.WAD";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -24,20 +24,20 @@ maps
 			resource1
 			{
 				type = 2;
-				location = "C:\\repoTemp\\BFGmoddingGroup\\ModdedDoom\\GzDoom\\gzdoom.pk3";
+				location = "D:\\Github\\BFGmoddingGroup\\ModdedDoom\\GzDoom\\gzdoom.pk3";
 				option1 = 0;
 				option2 = 0;
-				notfortesting = 0;
+				notfortesting = 1;
 				requiredarchives = "";
 			}
 			
 			resource2
 			{
 				type = 1;
-				location = "C:\\repoTemp\\BFGmoddingGroup\\ModdedDoom\\modFiles";
+				location = "D:\\Github\\BFGmoddingGroup\\ModdedDoom\\modFiles";
 				option1 = 0;
 				option2 = 0;
-				notfortesting = 0;
+				notfortesting = 1;
 				requiredarchives = "";
 			}
 		}
@@ -70,7 +70,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 256;
+			gridsize = 128;
 			gridrotate = 0;
 			gridoriginx = 0;
 			gridoriginy = 0;

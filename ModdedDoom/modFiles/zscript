@@ -1,22 +1,22 @@
 version "4.9.1"
 
-class zscriptTest : Zombieman{
-	Default
-	{
-	health 1000;
-	}
-
+Class BigZombieman : Zombieman
+{
+    Default
+    {
+        health 1000;
+        scale 2;
+        radius 40;
+        height 40;
+    }
 }
 
-class snowflake : LostSoul {
 
+
+Class IceEnemy : LostSoul {
 Default{
 -FLOAT
 Obituary "%o was frozen to death";
 }
-
-
-
-
 }
 
