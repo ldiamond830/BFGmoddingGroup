@@ -14,7 +14,7 @@ maps
 			resource0
 			{
 				type = 0;
-				location = "C:\\repoTemp\\BFGmoddingGroup\\ModdedDoom\\WADS\\DOOM2.WAD";
+				location = "D:\\Github\\BFGmoddingGroup\\ModdedDoom\\WADS\\DOOM2.WAD";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -23,22 +23,22 @@ maps
 			
 			resource1
 			{
-				type = 1;
-				location = "C:\\repoTemp\\BFGmoddingGroup\\ModdedDoom\\modFiles";
-				option1 = 0;
-				option2 = 0;
-				notfortesting = 0;
-				requiredarchives = "";
-			}
-			
-			resource2
-			{
 				type = 2;
-				location = "C:\\repoTemp\\BFGmoddingGroup\\ModdedDoom\\GzDoom\\gzdoom.pk3";
+				location = "D:\\Github\\BFGmoddingGroup\\ModdedDoom\\GzDoom\\gzdoom.pk3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 1;
 				requiredarchives = "gzdoom";
+			}
+			
+			resource2
+			{
+				type = 1;
+				location = "D:\\Github\\BFGmoddingGroup\\ModdedDoom\\modFiles";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
 			}
 		}
 		defaultfloortexture = "FLOOR0_1";
@@ -58,9 +58,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -5.180754f;
-		viewpositiony = -80.80479f;
-		viewscale = 1.856465f;
+		viewpositionx = 46.12467f;
+		viewpositiony = -98.9105f;
+		viewscale = 1.0985f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid

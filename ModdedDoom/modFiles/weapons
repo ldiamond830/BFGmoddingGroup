@@ -6,7 +6,7 @@ Default{
     Height 12;
     Inventory.PickupMessage "Icicle Crossbow";
     Weapon.SelectionOrder 500;
-    Weapon.AmmoType "Icicle";
+    Weapon.AmmoType "IcicleAmmo";
     Weapon.AmmoUse 1;
     Weapon.AmmoGive 20;
 }
@@ -25,9 +25,7 @@ States
 		Loop;
 	Fire:
 		MISG B 8 A_GunFlash;
-		MISG B 12 A_FireMissile;
-		
-		
+		MISG B 12 A_FireProjectile("IcicleProjectile");
 		Goto Reset;
 	Reset:
 	//holds on rest image for 80 ticks before being ready to fire again
@@ -76,3 +74,30 @@ States
 	}
 	
 }
+
+//===========================================================================
+//
+// Code (must be attached to StateProvider)
+//
+//===========================================================================
+/*
+extend class StateProvider
+{
+action void A_FireIcicle()
+	{
+		if (player == null)
+		{
+			return;
+		}
+		Weapon weap = player.ReadyWeapon;
+		if (weap != null && invoker == weap && stateinfo != null && stateinfo.mStateType == STATE_Psprite)
+		{
+			if (!weap.DepleteAmmo (weap.bAltFire, true, 1))
+				return;
+		}
+		
+		SpawnPlayerMissile ("IcicleProjectile");
+	}
+
+}
+*/
