@@ -1,0 +1,78 @@
+Class IcicleCrossBow : RocketLauncher {
+
+Default{
+	Obituary "%o was impalled by %k's icile";
+    Radius 20;
+    Height 12;
+    Inventory.PickupMessage "Icicle Crossbow";
+    Weapon.SelectionOrder 500;
+    Weapon.AmmoType "Icicle";
+    Weapon.AmmoUse 1;
+    Weapon.AmmoGive 20;
+}
+
+States
+	{
+	//currently using rocket launcher sprites as place hold
+	Ready:
+		MISG A 1 A_WeaponReady;
+		Loop;
+	Deselect:
+		MISG A 1 A_Lower;
+		Loop;
+	Select:
+		MISG A 1 A_Raise;
+		Loop;
+	Fire:
+		MISG B 8 A_GunFlash;
+		MISG B 12 A_FireMissile;
+		
+		
+		Goto Reset;
+	Reset:
+	//holds on rest image for 80 ticks before being ready to fire again
+	MISG A 80;
+	Goto Ready;
+	Flash:
+		MISF A 3 Bright A_Light1;
+		MISF B 4 Bright;
+		MISF CD 4 Bright A_Light2;
+		Goto LightDone;
+	Spawn:
+		LAUN A -1;
+		Stop;
+	}
+}
+
+Class IcicleProjectile : Actor{
+
+Default{
+	Radius 11;
+	Height 8;
+	Speed 25;
+	Damage 0.1;
+	DamageType "Ice";
+	Projectile;
+	//allows projectile to pierce but will damage every tick so keep damage value low
+	+RIPPER
+	
+}
+
+States
+	{
+	//currently using rocket sprites as place hold
+	Spawn:
+		MISL A 1 Bright;
+		Loop;
+	Death:
+		MISL B 8 Bright A_Explode;
+		MISL C 6 Bright;
+		MISL D 4 Bright;
+		Stop;
+	BrainExplode:
+		MISL BC 10 Bright;
+		MISL D 10 A_BrainExplode;
+		Stop;
+	}
+	
+}

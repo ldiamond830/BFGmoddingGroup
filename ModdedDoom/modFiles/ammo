@@ -1,0 +1,20 @@
+Class IcicleAmmo : Ammo
+{
+  Default
+  {
+    Inventory.PickupMessage "Icicle";
+    Inventory.Amount 25;
+    Inventory.MaxAmount 200;
+    Ammo.BackpackAmount 25;
+    Ammo.BackpackMaxAmount 400;
+    Inventory.Icon "ROCKA0";
+    Scale 0.4;
+  }
+
+  States
+  {
+  Spawn:
+    ROCK A 1;
+    Loop;
+  }
+}
