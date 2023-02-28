@@ -9,6 +9,7 @@ Class IcicleAmmo : Ammo
     Ammo.BackpackMaxAmount 400;
     Inventory.Icon "ROCKA0";
     Scale 0.4;
+	Tag "Icicle Ammo";
   }
 
   States

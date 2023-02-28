@@ -10,6 +10,7 @@ Class BigZombieman : Zombieman
         scale 2;
         radius 40;
         height 40;
+		Tag "Big Zombieman (testing only)";
     }
 }
 
@@ -19,6 +20,7 @@ Class IceEnemy : LostSoul {
 Default{
 -FLOAT
 Obituary "%o was frozen to death";
+Tag "Snowflake";
 }
 }
 
@@ -44,7 +46,7 @@ Default
 		DeathSound "cyber/death";
 		ActiveSound "cyber/active";
 		Obituary "player was shattered by the Ice Golem";
-		Tag "$FN_CYBER";
+		Tag "Ice Golem";
 	}
 	States
 	{

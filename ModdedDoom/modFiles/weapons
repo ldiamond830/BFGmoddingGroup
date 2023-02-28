@@ -9,6 +9,7 @@ Default{
     Weapon.AmmoType "IcicleAmmo";
     Weapon.AmmoUse 1;
     Weapon.AmmoGive 20;
+	Tag "Icicle Crossbow";
 }
 
 States
