@@ -1,3 +1,4 @@
+//using rocket ammo sprite as place holder
 Class IcicleAmmo : Ammo
 {
   Default
@@ -18,4 +19,26 @@ Class IcicleAmmo : Ammo
     ROCK A 1;
     Loop;
   }
+}
+
+//using bfg ammo sprite as place holder
+Class RatGrenadeAmmo : Ammo{
+	Default
+	  {
+		Inventory.PickupMessage "Rat!";
+		Inventory.Amount 20;
+		Inventory.MaxAmount 300;
+		Ammo.BackpackAmount 20;
+		Ammo.BackpackMaxAmount 600;
+		Inventory.Icon "CELLA0";
+		
+		Tag "Rat Grenade Ammo";
+	  }
+
+	  States
+	  {
+	  Spawn:
+		CELL A 1;
+		Loop;
+	  }
 }

@@ -4,7 +4,9 @@ DoomEdNums
 16100 = IceEnemy
 16200 = IceGolem
 17000 = IcicleCrossBow
+17100 = RatGrenade
 18000 = IcicleAmmo
+18100 = RatGrenadeAmmo
 
 }
 
