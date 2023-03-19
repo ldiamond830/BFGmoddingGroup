@@ -11,11 +11,11 @@ maps
 		resources
 		{
 		}
-		defaultfloortexture = "FLAT18";
-		defaultceiltexture = "METAL1";
-		defaulttoptexture = "BLAKWAL2";
-		defaultwalltexture = "BLAKWAL2";
-		defaultbottomtexture = "BLAKWAL2";
+		defaultfloortexture = "FLOOR0_1";
+		defaultceiltexture = "CEIL1_1";
+		defaulttoptexture = "STARTAN2";
+		defaultwalltexture = "STARTAN2";
+		defaultbottomtexture = "STARTAN2";
 		custombrightness = 196;
 		customfloorheight = 0;
 		customceilheight = 128;
@@ -28,9 +28,10 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -1197.851f;
-		viewpositiony = -763.2788f;
-		viewscale = 0.8650362f;
+		viewpositionx = 3451.077f;
+		viewpositiony = -817.1492f;
+		viewscale = 0.2901923f;
+		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
 		{
@@ -40,7 +41,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 64;
+			gridsize = 128;
 			gridrotate = 0;
 			gridoriginx = 0;
 			gridoriginy = 0;
@@ -86,13 +87,13 @@ maps
 					prefab1
 					{
 						name = "[Previous]";
-						numberofsectors = 2;
+						numberofsectors = 4;
 						outervertexmultiplier = 1;
 						innervertexmultiplier = 1;
 						stairtype = 0;
-						sectordepth = 16;
+						sectordepth = 32;
 						spacing = 0;
-						frontside = true;
+						frontside = false;
 						singlesectors = false;
 						distinctsectors = false;
 						singledirection = false;
@@ -100,7 +101,7 @@ maps
 						flipping = 0;
 						numberofcontrolpoints = 1;
 						applyfloormod = true;
-						floormod = 0;
+						floormod = 32;
 						applyceilingmod = true;
 						ceilingmod = 0;
 						applyfloortexture = false;
@@ -113,10 +114,34 @@ maps
 						applymiddletexture = false;
 						middletexture = "-";
 						applylowertexture = true;
-						lowertexture = "METAL4";
+						lowertexture = "-";
 						lowerunpegged = true;
 					}
 				}
+			}
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = true;
+					firsttag = 100;
+					lasttag = 150;
+					outerleft = -1728;
+					outerright = -192;
+					outertop = -960;
+					outerbottom = -2432;
+				}
+			}
+		}
+		
+		fieldtypes
+		{
+			
+			sector
+			{
+				user_managed_3d_floor = 3;
 			}
 		}
 	}
