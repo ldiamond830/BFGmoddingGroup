@@ -52,7 +52,7 @@ Weapon.SelectionOrder 3000;
 Weapon.AmmoUse 1;
 Weapon.AmmoGive 2;
 Weapon.AmmoType "RocketAmmo";
-Weapon.SlotNumber 5;
+Weapon.SlotNumber 7;
 +WEAPON.NOAUTOFIRE
 Inventory.PickupMessage "Player picked up the ultimate weapon";
 Tag "Rat Grenadge Weapon";
@@ -170,6 +170,34 @@ Death:
 BFE1 AB 8 Bright;
 BFE1 C 8 Bright A_BFGSpray;
 BFE1 DEF 8 Bright;
+Stop;
+}
+}
+
+Class StenProjectile : Actor{
+Default
+{
+Radius 13;
+Height 8;
+Speed 75;
+Damage 10;
+Projectile;
+}
+
+States
+{
+//currently using rocket sprites as place hold
+Spawn:
+MISL A 1 Bright;
+Loop;
+Death:
+MISL B 8 Bright A_Explode;
+MISL C 6 Bright;
+MISL D 4 Bright;
+Stop;
+BrainExplode:
+MISL BC 10 Bright;
+MISL D 10 A_BrainExplode;
 Stop;
 }
 }

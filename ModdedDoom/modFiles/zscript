@@ -126,9 +126,11 @@ States
 	Missile:
 		SKEL J 0 BRIGHT A_FaceTarget;
 		SKEL J 10 BRIGHT A_FaceTarget;
-		SKEL K 10 A_SkelMissile;
+		SKEL K 10 {
+		if (random(1,2)==1) SetStateLabel("Missile1");
+		}
 		SKEL K 10 A_FaceTarget;
-		Goto See;
+		Goto Missile2;
 	Pain:
 		SKEL L 5;
 		SKEL L 5 A_Pain;
@@ -145,6 +147,8 @@ States
 		HEAD KJIHG 8;
 		Goto See;
 	}
+	
+	
 }
 
 
