@@ -87,7 +87,7 @@ Default{
 	Health 4500;
 	Radius 20;
 	Height 56;
-	Mass 100;
+	Mass 100000;
 	Speed 20;
 	FloatSpeed 20;
 	PainChance 25;
@@ -134,7 +134,7 @@ States
 			{
 					int Dist = Distance3D(target);
 					int zDiff = (self.pos.z - target.pos.z);
-					if (Dist < 100)
+					if (Dist < 400)
 					{
 						SetStateLabel("Bomb");
 					}
