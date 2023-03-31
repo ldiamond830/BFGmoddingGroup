@@ -179,7 +179,7 @@ Class StenProjectile : Actor{
 	{
 	Radius 13;
 	Height 8;
-	Speed 1;
+	Speed 10;
 	Damage 10;
 	Scale 1;
 	Projectile;
