@@ -10,6 +10,16 @@ maps
 		
 		resources
 		{
+			
+			resource0
+			{
+				type = 1;
+				location = "C:\\Users\\zoedu\\Desktop\\uni\\BFGmoddingGroup-main\\ModdedDoom\\modFiles";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
 		}
 		defaultfloortexture = "FLOOR0_1";
 		defaultceiltexture = "CEIL1_1";
@@ -28,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = 2712.909f;
-		viewpositiony = -1833.077f;
-		viewscale = 0.223225f;
+		viewpositionx = 3820.731f;
+		viewpositiony = -1722.783f;
+		viewscale = 0.8288186f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -41,7 +51,7 @@ maps
 			backoffsety = 0;
 			backscalex = 100;
 			backscaley = 100;
-			gridsize = 256;
+			gridsize = 64;
 			gridrotate = 0;
 			gridoriginx = 0;
 			gridoriginy = 0;
