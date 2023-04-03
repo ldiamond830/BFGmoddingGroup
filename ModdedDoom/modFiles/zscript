@@ -127,7 +127,7 @@ States
 		SKEL J 0 BRIGHT A_FaceTarget;
 		SKEL J 10 BRIGHT A_FaceTarget;
 		SKEL K 10 {
-		/*
+		
 		//uses rng to either pick attack
 		if (random(1,2)==1)
 		{
@@ -141,12 +141,12 @@ States
 					}
 					else
 					{
-						SetStateLabel("TripleShot");
+						SetStateLabel("MassiveShot");
 					}
 				
 			}
 		}
-		*/
+		
 		}
 		
 		SKEL K 10 A_FaceTarget;
@@ -184,8 +184,8 @@ States
 	}
 	Goto See;
 	
-	TripleShot:
-	SKEL G 10 A_Log("TripleShot");
+	MassiveShot:
+	SKEL G 40 A_SpawnProjectile("StenMassiveProjectile", 90, 0,0);
 	Goto See;
 	
 	Pain:

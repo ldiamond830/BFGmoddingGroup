@@ -213,8 +213,35 @@ Class StenBomb : StenProjectile{
 	Speed 10;
 	-NOGRAVITY
 	}
+	
+	
 }
 
+Class StenMassiveProjectile : StenProjectile{
+	Default
+	{
+	Scale 6;
+	}
+	States
+	{
+	//currently using rocket sprites as place hold
+	Spawn:
+	MISL A 40 Bright;
+	Loop;
+
+	Death:
+	MISL B 8 Bright A_Explode;
+	MISL C 6 Bright;
+	MISL D 4 Bright;
+	Stop;
+
+	BrainExplode:
+	MISL BC 10 Bright;
+	MISL D 10 A_BrainExplode;
+	Stop;
+	}
+}
+}
 //===========================================================================
 //
 // Code (must be attached to StateProvider)
