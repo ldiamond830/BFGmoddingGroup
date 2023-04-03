@@ -83,6 +83,7 @@ Default
 }
 
 Class StenWizard : Cacodemon{
+
 Default{
 	Health 4500;
 	Radius 20;
@@ -135,6 +136,7 @@ States
 			{
 					int Dist = Distance3D(target);
 					int zDiff = (self.pos.z - target.pos.z);
+					//uses close range bomb if player is within a certain distance
 					if (Dist < 400)
 					{
 						SetStateLabel("Bomb");
@@ -150,12 +152,11 @@ States
 		}
 		
 		SKEL K 10 A_FaceTarget;
-		Goto RingShot;
+		Goto MassiveShot;
 	Bomb:
 	SKEL G 0 A_FaceTarget;
 	SKEL K 10 
 	{
-	A_Log("Bomb");
 		A_SpawnProjectile("StenBomb", 32, 0, 0, CMF_OFFSETPITCH);
 		A_SpawnProjectile("StenBomb", 32, 0, 0, CMF_OFFSETPITCH, 30);
 		A_SpawnProjectile("StenBomb", 32, 0, 0, CMF_OFFSETPITCH, -30);
@@ -166,26 +167,19 @@ States
 	RingShot:
 	SKEL G 10 A_Log("RingShot");
 	SKEL K 10{
-	A_SpawnProjectile("StenProjectile", 15, -100, 100, CMF_AIMDIRECTION, 5);
-	A_SpawnProjectile("StenProjectile", 15, -100, 0, CMF_AIMDIRECTION, 5);
-	A_SpawnProjectile("StenProjectile", 15, -100, -100, CMF_AIMDIRECTION, 5);
-	A_SpawnProjectile("StenProjectile", 15, 0, -100, CMF_AIMDIRECTION, 5);
-	A_SpawnProjectile("StenProjectile", 15, 100, -100, CMF_AIMDIRECTION, 5);
-	A_SpawnProjectile("StenProjectile", 15, 100, 0, CMF_AIMDIRECTION, 5);
-	A_SpawnProjectile("StenProjectile", 15, 100, 100, CMF_AIMDIRECTION, 5);
-	A_SpawnProjectile("StenProjectile", 15, 0, 100, CMF_AIMDIRECTION, 5);
-	/*
-	for(int i = 0; i < 10; i++){
-	float angle = GetActorAngle(360.0f / i);
-	 A_SpawnProjectile("StenProjectile", 32, cos(angle) * 50, sin(angle) * 50, CMF_AIMDIRECTION);
-	 A_Log("Spawned Projectile");
-	}
-	*/
+		for(int i = 0; i < 12; i++)
+		{
+		int degAngle = 360.0f / i;
+		//converts degree angle to a fixed point number which ZDoom uses for angles 
+		int fixedPointAngle = degAngle << 16;
+		 A_SpawnProjectile("StenProjectile", 32, cos(fixedPointAngle) * 50, sin(fixedPointAngle) * 50, CMF_AIMDIRECTION, 5);
+		}
 	}
 	Goto See;
 	
 	MassiveShot:
 	SKEL G 40 A_SpawnProjectile("StenMassiveProjectile", 90, 0,0);
+	SKEL G 10 A_SpawnProjectile("StenMassiveProjectileMoving", 90, 0,0);
 	Goto See;
 	
 	Pain:
