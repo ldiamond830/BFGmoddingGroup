@@ -178,8 +178,8 @@ States
 	Goto See;
 	
 	MassiveShot:
-	SKEL G 40 A_SpawnProjectile("StenMassiveProjectile", 90, 0,0);
-	SKEL G 10 A_SpawnProjectile("StenMassiveProjectileMoving", 90, 0,0);
+	SKEL G 40 A_SpawnProjectile("StenMassiveProjectile", 90);
+	SKEL G 10 A_SpawnProjectile("StenMassiveProjectileMoving", 90);
 	Goto See;
 	
 	Pain:

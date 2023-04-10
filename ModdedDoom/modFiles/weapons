@@ -221,7 +221,7 @@ Class StenMassiveProjectile : StenProjectile{
 	Default
 	{
 	Scale 6;
-	Speed 0;
+	Speed 0.1;
 	}
 	States
 	{
