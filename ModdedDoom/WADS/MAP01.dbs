@@ -477,7 +477,7 @@ maps
 			resource0
 			{
 				type = 0;
-				location = "D:\\Github\\BFGmoddingGroup\\ModdedDoom\\WADS\\DOOM2.WAD";
+				location = "C:\\Users\\brade\\OneDrive\\Documents\\GitHub\\BFGmoddingGroup\\ModdedDoom\\WADS\\DOOM2.WAD";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -487,7 +487,7 @@ maps
 			resource1
 			{
 				type = 2;
-				location = "D:\\Github\\BFGmoddingGroup\\ModdedDoom\\GzDoom\\gzdoom.pk3";
+				location = "C:\\Users\\brade\\OneDrive\\Documents\\GitHub\\BFGmoddingGroup\\ModdedDoom\\GzDoom\\gzdoom.pk3";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 1;
@@ -497,15 +497,15 @@ maps
 			resource2
 			{
 				type = 1;
-				location = "D:\\Github\\BFGmoddingGroup\\ModdedDoom\\modFiles";
+				location = "C:\\Users\\brade\\OneDrive\\Documents\\GitHub\\BFGmoddingGroup\\ModdedDoom\\modFiles";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = -1578.686f;
-		viewpositionx = -395.7097f;
+		viewpositiony = 552.8741f;
+		viewpositionx = 47.43361f;
 		
 		testprecommand
 		{
