@@ -221,16 +221,18 @@ Class StenMassiveProjectile : StenProjectile{
 	Default
 	{
 	Scale 6;
+	Speed 0.1;
 	}
 	States
 	{
-	//currently using rocket sprites as place hold
+	//currently using rocket sprites as place holder
 	Spawn:
+	//waits for 40 ticks before moving
 	MISL A 40 Bright;
-	Loop;
-
+	Goto Death;
+	
 	Death:
-	MISL B 8 Bright A_Explode;
+	MISL A 8 Bright;
 	MISL C 6 Bright;
 	MISL D 4 Bright;
 	Stop;
@@ -241,7 +243,33 @@ Class StenMassiveProjectile : StenProjectile{
 	Stop;
 	}
 }
+
+Class StenMassiveProjectileMoving : StenMassiveProjectile{
+	Default
+	{
+	Scale 6;
+	Speed 12;
+	}
+	States
+	{
+	//currently using rocket sprites as place holder
+	Spawn:
+	MISL A 1 Bright;
+	Loop;
+	
+	Death:
+	MISL B 8 Bright;
+	MISL C 6 Bright;
+	MISL D 4 Bright;
+	Stop;
+
+	BrainExplode:
+	MISL BC 10 Bright;
+	MISL D 10 A_BrainExplode;
+	Stop;
+	}
 }
+
 //===========================================================================
 //
 // Code (must be attached to StateProvider)
