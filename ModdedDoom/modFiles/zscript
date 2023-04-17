@@ -27,7 +27,7 @@ Tag "Snowflake";
 Class IceGolem : Actor{
 Default
 	{
-		Health 4000;
+		Health 4;
 		Radius 40;
 		Height 110;
 		Mass 1000;
@@ -41,12 +41,11 @@ Default
 		+NORADIUSDMG
 		+DONTMORPH
 		+BOSSDEATH
-		SeeSound "cyber/sight";
-		PainSound "cyber/pain";
-		DeathSound "cyber/death";
-		ActiveSound "cyber/active";
 		Obituary "Player was shattered by the Ice Golem";
 		Tag "Ice Golem";
+		DeathSound "Golem/Death";
+		SeeSound "Golem/See";
+		ActiveSound "Golem/Active"
 	}
 	States
 	{
