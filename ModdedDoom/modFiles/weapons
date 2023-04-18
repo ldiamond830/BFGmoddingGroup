@@ -11,6 +11,7 @@ Obituary "%o was impalled by %k's icile";
     Weapon.AmmoType "IcicleAmmo";
     Weapon.AmmoUse 1;
     Weapon.AmmoGive 20;
+	Weapon.SlotNumber 6;
 Tag "Icicle Crossbow";
 }
 
@@ -28,11 +29,15 @@ MISG A 1 A_Raise;
 Loop;
 Fire:
 MISG B 8 A_GunFlash;
-MISG B 12 SpawnPlayerMissile("IcicleProjectile");
+MISG B 12{
+SpawnPlayerMissile("IcicleProjectile");
+A_PlaySound("Crossbow/Fire");
+} 
+
 Goto Reset;
 Reset:
 //holds on rest image for 80 ticks before being ready to fire again
-MISG A 80;
+MISG C 45 A_PlaySound("Crossbow/Load");
 Goto Ready;
 Flash:
 MISF A 3 Bright A_Light1;
@@ -116,7 +121,10 @@ Spawn:
 MISL A 1 Bright;
 Loop;
 Death:
-MISL B 8 Bright A_Explode;
+MISL B 8 Bright{
+ A_Explode();
+ A_PlaySound("Crossbow/Hit");
+ }
 MISL C 6 Bright;
 MISL D 4 Bright;
 Stop;

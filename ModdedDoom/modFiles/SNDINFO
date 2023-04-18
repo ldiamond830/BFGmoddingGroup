@@ -8,6 +8,15 @@ Sten/See STENS
 Sten/Pain STENP
 $random Sten/Attack { STATK1 STATK2 STATK3 } 
 
+Crossbow/Fire CRBWF
+Crossbow/Load CRBWL
+Crossbow/Hit SNFKD
+
+Snowflake/Death SNFKD
+Snowflake/Attack SNFKA
+Snowflake/Active SNFKS
+Snowflake/Pain SNFKP
+
 STATK1	STATK1
 STATK2	STATK2
 STATK3	STATK3
