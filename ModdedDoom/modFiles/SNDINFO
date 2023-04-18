@@ -1,0 +1,13 @@
+Golem/Death IGOLD
+Golem/See IGOG
+Golem/Active IGOLA
+Golem/Pain IGOLP
+
+Sten/Death STEND
+Sten/See STENS
+Sten/Pain STENP
+$random Sten/Attack { STATK1 STATK2 STATK3 } 
+
+STATK1	STATK1
+STATK2	STATK2
+STATK3	STATK3

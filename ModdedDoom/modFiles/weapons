@@ -155,7 +155,6 @@ Mass 9;
 
 RenderStyle "Add";
 Alpha 0.75;
-DeathSound "weapons/bfgx";
 Obituary "$OB_MPBFG_BOOM";
 }
 States
@@ -183,7 +182,6 @@ Class StenProjectile : Actor{
 	Damage 10;
 	Scale 1;
 	Projectile;
-	DeathSound "weapons/bfgx";
 	Obituary "$OB_MPBFG_BOOM";
 	}
 
