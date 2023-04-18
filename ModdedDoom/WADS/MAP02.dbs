@@ -12,7 +12,7 @@ maps
 		{
 		}
 		defaultfloortexture = "RROCK04";
-		defaultceiltexture = "FLOOR6_2";
+		defaultceiltexture = "ASHWALL2";
 		defaulttoptexture = "METAL";
 		defaultwalltexture = "METAL";
 		defaultbottomtexture = "METAL";
@@ -28,9 +28,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = 3683.929f;
-		viewpositiony = -67.50404f;
-		viewscale = 0.1378581f;
+		viewpositionx = 4022.485f;
+		viewpositiony = -2136.168f;
+		viewscale = 0.1378578f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
