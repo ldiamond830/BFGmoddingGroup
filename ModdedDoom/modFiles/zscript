@@ -2,6 +2,8 @@ version "4.9.1"
 //main file + monster definitions
 #include "ammo"
 #include "weapons"
+
+//this is purely for testing
 Class BigZombieman : Zombieman
 {
     Default
@@ -18,7 +20,12 @@ Class BigZombieman : Zombieman
 
 Class IceEnemy : LostSoul {
 Default{
+Health 75;
 -FLOAT
+AttackSound "Snowflake/Attack";
+PainSound "Snowflake/Pain";
+DeathSound "Snowflake/Death";
+ActiveSound "Snowflake/Active";
 Obituary "%o was frozen to death";
 Tag "Snowflake";
 }
