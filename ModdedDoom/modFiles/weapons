@@ -36,7 +36,7 @@ A_PlaySound("Crossbow/Fire");
 
 Goto Reset;
 Reset:
-//holds on rest image for 80 ticks before being ready to fire again
+//holds on rest image for 45 ticks before being ready to fire again
 MISG C 45 A_PlaySound("Crossbow/Load");
 Goto Ready;
 Flash:
