@@ -104,7 +104,7 @@ Default{
 Radius 11;
 Height 8;
 Speed 25;
-Damage 0.1f;
+Damage 1;
 DamageType "Ice";
 Projectile;
 //allows projectile to pierce but will damage every tick so keep damage value low
