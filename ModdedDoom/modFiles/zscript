@@ -32,27 +32,27 @@ Tag "Snowflake";
 States
 	{
 	Spawn:
-		SKUL A 10 BRIGHT A_Look;
+		SNFK A 10 BRIGHT A_Look;
 		Loop;
 	See:
-		SKUL A 6 BRIGHT A_Chase;
+		SNFK A 6 BRIGHT A_Chase;
 		Loop;
 	Missile:
-		SKUL A 10 BRIGHT A_FaceTarget;
-		SKUL A 4 BRIGHT A_SkullAttack;
-		SKUL A 4 BRIGHT;
+		SNFK A 10 BRIGHT A_FaceTarget;
+		SNFK A 4 BRIGHT A_SkullAttack;
+		SNFK A 4 BRIGHT;
 		Goto Missile+2;
 	Pain:
-		SKUL A 3 BRIGHT;
-		SKUL A 3 BRIGHT A_Pain;
+		SNFK A 3 BRIGHT;
+		SNFK A 3 BRIGHT A_Pain;
 		Goto See;
 	Death:
-		SKUL A 6 BRIGHT;
-		SKUL A 6 BRIGHT A_Scream;
-		SKUL A 6 BRIGHT;
-		SKUL A 6 BRIGHT A_NoBlocking;
-		SKUL A 6;
-		SKUL A 6;
+		SNFK A 6 BRIGHT;
+		SNFK A 6 BRIGHT A_Scream;
+		SNFK A 6 BRIGHT;
+		SNFK A 6 BRIGHT A_NoBlocking;
+		SNFK A 6;
+		SNFK A 6;
 		Stop;
 	}
 }
