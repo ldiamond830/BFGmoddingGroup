@@ -47,11 +47,8 @@ States
 		SNFK A 3 BRIGHT A_Pain;
 		Goto See;
 	Death:
-		SNFK A 6 BRIGHT;
 		SNFK A 6 BRIGHT A_Scream;
-		SNFK A 6 BRIGHT;
 		SNFK A 6 BRIGHT A_NoBlocking;
-		SNFK A 6;
 		SNFK A 6;
 		Stop;
 	}
