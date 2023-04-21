@@ -18,7 +18,7 @@ Class BigZombieman : Zombieman
 
 
 
-Class IceEnemy : LostSoul {
+Class SnowFlake : LostSoul {
 Default{
 Health 75;
 -FLOAT
@@ -29,6 +29,32 @@ ActiveSound "Snowflake/Active";
 Obituary "%o was frozen to death";
 Tag "Snowflake";
 }
+States
+	{
+	Spawn:
+		SKUL A 10 BRIGHT A_Look;
+		Loop;
+	See:
+		SKUL A 6 BRIGHT A_Chase;
+		Loop;
+	Missile:
+		SKUL A 10 BRIGHT A_FaceTarget;
+		SKUL A 4 BRIGHT A_SkullAttack;
+		SKUL A 4 BRIGHT;
+		Goto Missile+2;
+	Pain:
+		SKUL A 3 BRIGHT;
+		SKUL A 3 BRIGHT A_Pain;
+		Goto See;
+	Death:
+		SKUL A 6 BRIGHT;
+		SKUL A 6 BRIGHT A_Scream;
+		SKUL A 6 BRIGHT;
+		SKUL A 6 BRIGHT A_NoBlocking;
+		SKUL A 6;
+		SKUL A 6;
+		Stop;
+	}
 }
 
 Class IceGolem : Actor{
