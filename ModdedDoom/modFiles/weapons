@@ -16,38 +16,39 @@ Tag "Icicle Crossbow";
 }
 
 States
-{
-//currently using rocket launcher sprites as place hold
-Ready:
-MISG A 1 A_WeaponReady;
-Loop;
-Deselect:
-MISG A 1 A_Lower;
-Loop;
-Select:
-MISG A 1 A_Raise;
-Loop;
-Fire:
-MISG B 8 A_GunFlash;
-MISG B 12{
-SpawnPlayerMissile("IcicleProjectile");
-A_PlaySound("Crossbow/Fire");
-} 
+	{
+	Ready:
+	ICBX A 1 A_WeaponReady;
+	Loop;
+	
+	Deselect:
+	ICBX A 1 A_Lower;
+	Loop;
+	
+	Select:
+	ICBX A 1 A_Raise;
+	Loop;
+	
+	Fire:
+	ICBX B 10;
+	ICBX C 5{
+	SpawnPlayerMissile("IcicleProjectile");
+	A_PlaySound("Crossbow/Fire");
+	} 
+	ICBX D 5;
+	Goto Reset;
+	
+	Reset:
+	//holds on rest image for 45 ticks before being ready to fire again
+	ICBX D 15 A_PlaySound("Crossbow/Load");
+	ICBX E 15;
+	ICBX F 15;
+	Goto Ready;
 
-Goto Reset;
-Reset:
-//holds on rest image for 45 ticks before being ready to fire again
-MISG C 45 A_PlaySound("Crossbow/Load");
-Goto Ready;
-Flash:
-MISF A 3 Bright A_Light1;
-MISF B 4 Bright;
-MISF CD 4 Bright A_Light2;
-Goto LightDone;
-Spawn:
-LAUN A -1;
-Stop;
-}
+	Spawn:
+	ICBP A -1;
+	Stop;
+	}
 }
 
 Class RatGrenade : DoomWeapon{
