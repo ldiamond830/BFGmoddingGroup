@@ -17,6 +17,11 @@ Tag "Icicle Crossbow";
 
 States
 	{
+	//pickup
+	Spawn:
+	ICBP A -1;
+	Stop;
+	
 	Ready:
 	ICBX A 1 A_WeaponReady;
 	Loop;
@@ -45,9 +50,7 @@ States
 	ICBX F 15;
 	Goto Ready;
 
-	Spawn:
-	ICBP A -1;
-	Stop;
+	
 	}
 }
 
