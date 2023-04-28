@@ -38,6 +38,7 @@ States
 	ICBX B 10;
 	ICBX C 5{
 	SpawnPlayerMissile("IcicleProjectile");
+	A_TakeInventory("IcicleAmmo", 1);
 	A_PlaySound("Crossbow/Fire");
 	} 
 	ICBX D 5;
@@ -108,7 +109,7 @@ Default{
 Radius 11;
 Height 8;
 Speed 100;
-Damage 6;
+Damage 1;
 DamageType "Ice";
 Projectile;
 //allows projectile to pierce but will damage every tick so keep damage value low
