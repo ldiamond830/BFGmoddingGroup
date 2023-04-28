@@ -107,7 +107,7 @@ Class IcicleProjectile : Actor{
 Default{
 Radius 11;
 Height 8;
-Speed 25;
+Speed 50;
 Damage 5;
 DamageType "Ice";
 Projectile;
