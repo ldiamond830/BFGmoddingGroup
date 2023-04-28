@@ -107,8 +107,8 @@ Class IcicleProjectile : Actor{
 Default{
 Radius 11;
 Height 8;
-Speed 50;
-Damage 5;
+Speed 100;
+Damage 6;
 DamageType "Ice";
 Projectile;
 //allows projectile to pierce but will damage every tick so keep damage value low
