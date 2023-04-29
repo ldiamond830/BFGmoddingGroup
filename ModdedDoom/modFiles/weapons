@@ -123,7 +123,7 @@ States
 {
 //currently using rocket sprites as place hold
 Spawn:
-MISL A 1 Bright;
+ICEP A 1 Bright;
 Loop;
 Death:
 MISL B 8 Bright{
