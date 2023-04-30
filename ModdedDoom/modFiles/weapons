@@ -71,20 +71,34 @@ Tag "Rat Grenadge Weapon";
 States
 {
 Ready:
-BFGG A 1 A_WeaponReady;
+RATG A 1 A_WeaponReady;
 Loop;
+
 Deselect:
-BFGG A 1 A_Lower;
-Loop;
+RATG M 5; 
+RATG L 5;
+Goto Lower;
+
 Select:
-BFGG A 1 A_Raise;
-Loop;
+RATG L 5;
+RATG M 5;
+Goto Raise;
+
 Fire:
-BFGG A 20 A_BFGsound;
-BFGG B 10 A_GunFlash;
-BFGG B 10 A_ThrowGrenade("RatGrenadeProjectile", 0, 0, 8, true);
-BFGG B 20 A_ReFire;
+RATG B 4;
+RATG C 4;
+RATG D 4;
+RATG E 4;
+RATG F 3;
+RATG G 3 A_ThrowGrenade("RatGrenadeProjectile", 0, 0, 8, true);
+RATG H 3;
+RATG I 3;
+RATG J 3;
+RATG K 3;
+RATG L 3;
+RATG M 3 A_ReFire;
 Goto Ready;
+
 Flash:
 BFGF A 11 Bright A_Light1;
 BFGF B 6 Bright A_Light2;
@@ -92,12 +106,22 @@ Goto LightDone;
 Spawn:
 BFUG A -1;
 Stop;
+
 OldFire:
 BFGG A 10 A_BFGsound;
 BFGG BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB 1 A_FireOldBFG;
 BFGG B 0 A_Light0;
 BFGG B 20 A_ReFire;
 Goto Ready;
+
+//actual raise and lower weapon functionality is controlled in separate states for easier tweaking
+Lower:
+RATG K 1 A_Lower(18);
+Loop;
+
+Raise:
+RATG A 1 A_Raise(18);
+Loop;
 }
 
 }
@@ -121,7 +145,6 @@ Projectile;
 
 States
 {
-//currently using rocket sprites as place hold
 Spawn:
 ICEP A 1 Bright;
 Loop;
@@ -173,10 +196,10 @@ Obituary "$OB_MPBFG_BOOM";
 States
 {
 Spawn:
-BFS1 AB 4 Bright;
+RATP A 4 Bright;
 Goto Timer;
 Timer:
-BFS1 AB 100 Bright;
+RATP A 100 Bright;
 Goto Death;
 Death:
 BFE1 AB 8 Bright;
