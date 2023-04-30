@@ -47,9 +47,10 @@ States
 		SNFK A 3 BRIGHT A_Pain;
 		Goto See;
 	Death:
-		SNFK A 6 BRIGHT A_Scream;
-		SNFK A 6 BRIGHT A_NoBlocking;
-		SNFK A 6;
+		SKUL H 8 BRIGHT A_Scream;
+		SKUL I 8 BRIGHT A_NoBlocking;
+		SKUL J 8;
+		SKUL K 8;
 		Stop;
 	}
 }
