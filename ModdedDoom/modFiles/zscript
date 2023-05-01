@@ -196,7 +196,7 @@ States
 		for(int i = 0; i < 12; i++)
 		{
 		int degAngle = 360.0f / i;
-		//converts degree angle to a fixed point number which ZDoom uses for angles 
+		//converts degree angle to a fixed point number which ZDoom uses for rotations 
 		int fixedPointAngle = degAngle << 16;
 		 A_SpawnProjectile("StenProjectile", 32, cos(fixedPointAngle) * 50, sin(fixedPointAngle) * 50, CMF_AIMDIRECTION, 5);
 		 A_PlaySound("Sten/Attack");
@@ -206,6 +206,7 @@ States
 	
 	MassiveShot:
 	STEN C 40{
+	//spawns a projectile that stays in place to serve as a build up
 	A_SpawnProjectile("StenMassiveProjectile", 90);
 	A_PlaySound("Sten/Attack");
 	}

@@ -110,13 +110,6 @@ Spawn:
 BFUG A -1;
 Stop;
 
-OldFire:
-BFGG A 10 A_BFGsound;
-BFGG BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB 1 A_FireOldBFG;
-BFGG B 0 A_Light0;
-BFGG B 20 A_ReFire;
-Goto Ready;
-
 //actual raise and lower weapon functionality is controlled in separate states for easier tweaking
 Lower:
 RATG K 1 A_Lower(18);
@@ -153,6 +146,7 @@ ICEP A 1 Bright;
 Loop;
 Death:
 MISL B 8 Bright{
+//deals splash damage upon hitting wall or floor
  A_Explode();
  A_PlaySound("Crossbow/Hit");
  }
@@ -194,7 +188,7 @@ Mass 9;
 
 RenderStyle "Add";
 Alpha 0.75;
-Obituary "$OB_MPBFG_BOOM";
+Obituary "RATTED";
 }
 States
 {
@@ -221,12 +215,12 @@ Class StenProjectile : Actor{
 	Damage 5;
 	Scale 1;
 	Projectile;
-	Obituary "$OB_MPBFG_BOOM";
+	Obituary "Player was slain by the dark wizard";
 	}
 
 	States
 	{
-	//currently using rocket sprites as place hold
+	//uses rocket sprite
 	Spawn:
 	MISL A 1 Bright;
 	Loop;
