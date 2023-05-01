@@ -61,7 +61,7 @@ Default
 Weapon.SelectionOrder 3000;
 Weapon.AmmoUse 1;
 Weapon.AmmoGive 2;
-Weapon.AmmoType "RocketAmmo";
+Weapon.AmmoType "RatGrenadeAmmo";
 Weapon.SlotNumber 7;
 +WEAPON.NOAUTOFIRE
 Inventory.PickupMessage "Player picked up the ultimate weapon";
@@ -106,8 +106,9 @@ Flash:
 BFGF A 11 Bright A_Light1;
 BFGF B 6 Bright A_Light2;
 Goto LightDone;
+
 Spawn:
-BFUG A -1;
+RATP A -1;
 Stop;
 
 //actual raise and lower weapon functionality is controlled in separate states for easier tweaking
