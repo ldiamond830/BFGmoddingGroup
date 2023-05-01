@@ -90,7 +90,10 @@ RATG C 4;
 RATG D 4;
 RATG E 4;
 RATG F 3;
-RATG G 3 A_ThrowGrenade("RatGrenadeProjectile", 0, 0, 8, true);
+RATG G 3{
+ A_ThrowGrenade("RatGrenadeProjectile", 0, 0, 8, true);
+ A_PlaySound("Rat/Attack");
+ }
 RATG H 3;
 RATG I 3;
 RATG J 3;
