@@ -26,11 +26,11 @@ Class RatGrenadeAmmo : Ammo{
 	Default
 	  {
 		Inventory.PickupMessage "Rat!";
-		Inventory.Amount 20;
+		Inventory.Amount 2;
 		Inventory.MaxAmount 300;
 		Ammo.BackpackAmount 20;
 		Ammo.BackpackMaxAmount 600;
-		Inventory.Icon "CELLA0";
+		Inventory.Icon "RATPA0";
 		
 		Tag "Rat Grenade Ammo";
 	  }
@@ -38,7 +38,7 @@ Class RatGrenadeAmmo : Ammo{
 	  States
 	  {
 	  Spawn:
-		CELL A 1;
+		RATP A 1;
 		Loop;
 	  }
 }
