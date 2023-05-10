@@ -26,8 +26,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = 872.5735f;
-		viewpositionx = 4276.448f;
+		viewpositiony = 541.551f;
+		viewpositionx = 1491.102f;
 		
 		testprecommand
 		{
@@ -47,11 +47,11 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 512;
+			gridsize = 128;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.1119858f;
+		viewscale = 0.2329806f;
 		
 		reloadresourceprecommand
 		{
@@ -106,8 +106,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = 1440.058f;
-		viewpositionx = 911.5286f;
+		viewpositiony = -2546.521f;
+		viewpositionx = 10896.5f;
 		
 		testprecommand
 		{
@@ -127,11 +127,11 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 512;
+			gridsize = 2048;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.08157302f;
+		viewscale = 0.01689999f;
 		
 		reloadresourceprecommand
 		{
@@ -143,6 +143,246 @@ maps
 		overridebottomtexture = false;
 		defaultbottomtexture = "STARTAN2";
 		defaultfloortexture = "MODWALL3";
+		overrideceilheight = false;
+		overridebrightness = false;
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		overridefloorheight = false;
+		overridetoptexture = false;
+		uselongtexturenames = false;
+		overridefloortexture = false;
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+	}
+	
+	MAP01
+	{
+		defaultceiltexture = "METAL1";
+		overridefloorheight = false;
+		customfloorheight = 0;
+		uselongtexturenames = false;
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 1;
+				location = "C:\\Users\\jakes\\Documents\\RIT\\590\\Repo\\ModdedDoom\\modFiles";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
+		}
+		overrideceiltexture = false;
+		viewpositionx = 1287.075f;
+		defaulttoptexture = "BLAKWAL2";
+		overrideceilheight = false;
+		viewpositiony = -1331.304f;
+		overridebrightness = false;
+		overridefloortexture = false;
+		
+		grid
+		{
+			backoffsetx = 0;
+			backsource = 0;
+			gridoriginy = 0;
+			backscaley = 100;
+			gridrotate = 0;
+			backscalex = 100;
+			gridoriginx = 0;
+			gridsize = 128;
+			background = "";
+			backoffsety = 0;
+		}
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		overridebottomtexture = false;
+		defaultbottomtexture = "BLAKWAL2";
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		defaultfloortexture = "FLAT18";
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		defaultwalltexture = "BLAKWAL2";
+		overridetoptexture = false;
+		customceilheight = 128;
+		overridemiddletexture = false;
+		custombrightness = 196;
+		viewscale = 0.2614924f;
+	}
+	
+	MAP02
+	{
+		defaultceiltexture = "ASHWALL2";
+		overridefloorheight = false;
+		customfloorheight = 0;
+		uselongtexturenames = false;
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 1;
+				location = "C:\\Users\\jakes\\Documents\\RIT\\590\\Repo\\ModdedDoom\\modFiles";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
+		}
+		overrideceiltexture = false;
+		viewpositionx = 2225.38f;
+		defaulttoptexture = "METAL";
+		overrideceilheight = false;
+		viewpositiony = -1560.431f;
+		overridebrightness = false;
+		overridefloortexture = false;
+		
+		grid
+		{
+			backoffsetx = 0;
+			backsource = 0;
+			gridoriginy = 0;
+			backscaley = 100;
+			gridrotate = 0;
+			backscalex = 100;
+			gridoriginx = 0;
+			gridsize = 128;
+			background = "";
+			backoffsety = 0;
+		}
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		overridebottomtexture = false;
+		defaultbottomtexture = "METAL";
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		defaultfloortexture = "RROCK04";
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		defaultwalltexture = "METAL";
+		overridetoptexture = false;
+		customceilheight = 128;
+		overridemiddletexture = false;
+		custombrightness = 196;
+		viewscale = 0.2466677f;
+	}
+	
+	MAP03
+	{
+		defaultwalltexture = "STARTAN2";
+		overridemiddletexture = false;
+		defaultceiltexture = "CEIL1_1";
+		overrideceiltexture = false;
+		custombrightness = 196;
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 1;
+				location = "C:\\Users\\jakes\\Documents\\RIT\\590\\Repo\\ModdedDoom\\modFiles";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
+		}
+		viewpositiony = -545.9677f;
+		viewpositionx = 4972.695f;
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		customceilheight = 128;
+		customfloorheight = 0;
+		
+		grid
+		{
+			backoffsetx = 0;
+			backsource = 0;
+			gridoriginy = 0;
+			backscaley = 100;
+			gridrotate = 0;
+			backscalex = 100;
+			gridoriginx = 0;
+			gridsize = 256;
+			background = "";
+			backoffsety = 0;
+		}
+		viewscale = 0.2040891f;
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		defaulttoptexture = "STARTAN2";
+		overridebottomtexture = false;
+		defaultbottomtexture = "STARTAN2";
+		defaultfloortexture = "FLOOR0_1";
 		overrideceilheight = false;
 		overridebrightness = false;
 		
